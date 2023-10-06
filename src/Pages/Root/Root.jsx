@@ -4,10 +4,10 @@ import Navbar from '../../components/Navbar/Navbar';
 const Root = () => {
     return (
         <div>
-            <div className='sticky top-0'>
+            <div className='sticky top-0 z-20'>
                 <Navbar></Navbar>
             </div>
-            <div className=''>
+            <div className='z-10'>
                 <Outlet />
             </div>
         </div>

@@ -10,8 +10,8 @@ import Root from './Pages/Root/Root.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
-import Schedule from './Pages/Schedule/Schedule.jsx';
 import Store from './Pages/Store/Store.jsx';
+import Booking from './Pages/Booking/Booking.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: "/schedule",
-        element: <Schedule></Schedule>
+        path: "/booking",
+        element: <Booking></Booking>
       },
       {
         path: "/store",
