@@ -8,7 +8,7 @@ const Banner = () => {
                 <div id="item1" className="carousel-item w-full">
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://elementsofbyron.com.au/wp-content/uploads/2018/09/First_Light_Club_Beachfront_Yoga_1350x1017.jpg)' }}>
                         <div className="hero-overlay bg-opacity-25"></div>
-                        <div className="hero-content text-center text-neutral-content">
+                        <div className="hero-content text-center text-neutral-content py-16">
                             <div className="space-y-12">
                                 <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Keeping Your Mind in Best Condition</h1>
                                 <p className="mb-5 text-xs lg:text-md">Experience the power of healing yoga. Balance your body and mind with our center</p>

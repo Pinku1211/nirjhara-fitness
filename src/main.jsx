@@ -10,8 +10,8 @@ import Root from './Pages/Root/Root.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
-import Store from './Pages/Store/Store.jsx';
 import Booking from './Pages/Booking/Booking.jsx';
+import Classes from './Pages/Classes/Classes.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
         element: <Booking></Booking>
       },
       {
-        path: "/store",
-        element: <Store></Store>
+        path: "/classes",
+        element: <Classes></Classes>
       }
     ]
   },
