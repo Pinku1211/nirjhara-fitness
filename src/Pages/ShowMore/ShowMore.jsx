@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const ShowMore = () => {
 
+    const { id } = useParams();
+    const cards = useLoaderData();
 
-
+    const selectedCard = cards.find(card => card.id == id)
+    console.log(selectedCard.service_name)
+    console.log(selectedCard)
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+        <div className=" bg-[#f7f2eb] pb-10">
+            <figure><img className='h-[500px] w-full' src={selectedCard.photo} alt="Shoes" /></figure>
+            <div className="space-y-8 mt-8 px-8 lg:px-24">
+                <h2 className="card-title text-4xl font-bold">{selectedCard.service_name}</h2>
+                <p className='text-lg'>{selectedCard.details}</p>
+                <div className="card-actions justify-center my-10">
+                <button className="outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]">Go To Classes</button>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 my-10 lg:px-32">
+        <div className="navbar bg-base-100 my-10 lg:px-24">
             <div className="navbar-start w-full justify-between md:justify-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-md">
+                <ul className="menu menu-horizontal px-1 text-md font-bold">
                     {navLinks}
                 </ul>
             </div>

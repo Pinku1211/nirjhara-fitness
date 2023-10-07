@@ -1,0 +1,46 @@
+ [
+      {
+        "id": 1,
+        "photo": "https://www.shape.com/thmb/-qCHiZQXESlbwf4eLEd3zSp_oQQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Gallery-Morning-Yoga-madison-lavern-CDJCAcAAPlU-unsplash-2000-6e332c6b5b0b4ce5acbc80c9ed75302f.jpg",
+        "title": "Winya Yoga",
+        "details": "Winya Flow Yoga is a dynamic and invigorating practice that harmoniously synchronizes breath with movement. This class is suitable for all levels and emphasizes continuous flowing sequences to build strength, flexibility, and mindfulness. Join us to experience the power of breath and movement.",
+        "class_time": "Mondays and Wednesdays at 6:30 PM"
+      },
+      {
+        "id": 2,
+        "photo": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2022/07/halfPigeonPose-3056178-025-770x533-1-650x428.jpg",
+        "title": "Yoga for Beginners",
+        "details": "Yoga is a foundational practice focusing on static postures and controlled breathing. This class is designed for beginners, emphasizing proper alignment and relaxation to improve strength, flexibility, and overall well-being.",
+        "class_time": "Tuesdays and Thursdays at 5:00 PM"
+      },
+      {
+        "id": 3,
+        "photo": "https://static.wixstatic.com/media/d7d604_7a941760866f49539000074f6d19b813~mv2.jpg/v1/fill/w_640,h_640,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d7d604_7a941760866f49539000074f6d19b813~mv2.jpg",
+        "title": "Sunrise Yoga",
+        "details": "Start your day with a sense of calm and clarity. This class includes yoga postures and meditation to awaken your body and mind. Connect with your inner self and embrace the day with a positive mindset.",
+        "class_time": "Daily at 6:00 AM"
+      },
+      {
+        "id": 4,
+        "photo": "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/05/Yoga-Stretches-1281234344-770x533-1.jpg",
+        "title": "Prenatal Yoga",
+        "details": "Our Prenatal Yoga class is designed for expectant mothers. Experience gentle postures and relaxation techniques tailored to pregnancy. Strengthen your body and connect with your baby in a supportive and nurturing environment.",
+        "class_time": "Saturdays at 10:00 AM"
+      },
+      {
+        "id": 5,
+        "photo": "https://chopra.brightspotcdn.com/dims4/default/28882df/2147483647/strip/true/crop/816x350+0+20/resize/894x383!/quality/90/?url=http%3A%2F%2Fchopra-brightspot.s3.us-east-1.amazonaws.com%2F15%2Fd8%2F3de7959aeead47d62d78105ede9c%2Fa-young-woman-in-head-to-knee-forward-bend-yoga-pose.jpg",
+        "title": "Yoga for Relief",
+        "details": "This class focuses on gentle poses and breathing exercises to alleviate stress and promote relaxation. Suitable for all levels, it's an opportunity to unwind, de-stress, and find inner peace.",
+        "class_time": "Fridays at 7:00 PM"
+      },
+      {
+        "id": 6,
+        "photo": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2023/08/Yoga_constipation_GettyImages1409048100_Thumb-732x549.jpg",
+        "title": "Morning Yoga",
+        "details": "Senior Yoga is tailored for older adults and emphasizes mobility, balance, and relaxation. Join us to improve flexibility, reduce joint pain, and maintain a healthy lifestyle in your golden years.",
+        "class_time": "Wednesdays at 7:00 AM"
+      }
+    ]
+  
+  

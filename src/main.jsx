@@ -38,12 +38,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/classes",
-        element: <Classes></Classes>
+        element: <Classes></Classes>,
+        loader: () => fetch("/classes.json")
       },
       {
         path: "/details/:id",
-        element: <ShowMore></ShowMore>
-      }
+        element: <ShowMore></ShowMore>,
+        loader: () => fetch ("/services.json")
+      },
+
     ]
   },
 ]);
