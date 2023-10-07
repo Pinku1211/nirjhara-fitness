@@ -11,7 +11,7 @@ const Banner = () => {
                         <div className="hero-content text-center text-neutral-content py-16">
                             <div className="space-y-12">
                                 <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Keeping Your Mind in Best Condition</h1>
-                                <p className="mb-5 text-xs lg:text-md">Experience the power of healing yoga. Balance your body and mind with our center</p>
+                                <p className="mb-5 lg:text-md">Experience the power of healing yoga. Balance your body and mind with our center</p>
                                 <button className="btn rounded-full bg-[#FF6969] border-none text-white font-thin text-xs">Make an Appointment</button>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ const Banner = () => {
                         <div className="hero-content text-center text-neutral-content">
                             <div className="space-y-12">
                                 <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Work on Your Spiritual Growth</h1>
-                                <p className="mb-5 text-xs lg:text-md"> For those interested in spirituality, yoga offers a path for self-discovery and personal growth</p>
+                                <p className="mb-5 lg:text-md"> For those interested in spirituality, yoga offers a path for self-discovery and personal growth</p>
                                 <button className="btn rounded-full bg-[#FF6969] border-none text-white font-thin text-xs">Make an Appointment</button>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const Banner = () => {
                         <div className="hero-content text-center text-neutral-content">
                             <div className="space-y-12">
                                 <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Be Strong and get Better Posture</h1>
-                                <p className="mb-5 text-xs lg:text-md">Yoga encourages body awareness and alignment, which can lead to improved posture.</p>
+                                <p className="mb-5 lg:text-md">Yoga encourages body awareness and alignment, which can lead to improved posture.</p>
                                 <button className="btn rounded-full bg-[#FF6969] border-none text-white font-thin text-xs">Make an Appointment</button>
                             </div>
                         </div>

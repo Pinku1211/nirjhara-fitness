@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Register/Register.jsx';
 import Booking from './Pages/Booking/Booking.jsx';
 import Classes from './Pages/Classes/Classes.jsx';
+import ShowMore from './Pages/ShowMore/ShowMore.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/classes",
         element: <Classes></Classes>
+      },
+      {
+        path: "/details/:id",
+        element: <ShowMore></ShowMore>
       }
     ]
   },

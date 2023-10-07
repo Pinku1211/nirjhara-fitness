@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "photo": "https://gethealthyu.com/wp-content/uploads/2017/04/upper-body-strength-yoga.png",
+    "service_name": "Vinyasa Flow Yoga",
+    "details": "Vinyasa Flow Yoga is a dynamic and invigorating practice that seamlessly synchronizes breath with movement. This style of yoga emphasizes continuous flowing sequences, making it an ideal choice for those looking to build strength, flexibility, and mindfulness. Suitable for all levels, from beginners to advanced practitioners, Vinyasa Flow Yoga encourages self-expression and creativity in your practice. Whether you're looking to release stress, improve physical fitness, or deepen your mind-body connection, this class will leave you feeling refreshed and revitalized."
+  },
+  {
+    "id": 2,
+    "photo": "https://media.self.com/photos/5b7c4e71ecbb7f4c41c77335/2:1/w_2580,c_limit/triangle-pose-beginner-yoga.jpg",
+    "service_name": "Hatha Yoga",
+    "details": "Hatha Yoga is a classical and foundational practice that focuses on the fundamentals of yoga. In these classes, you'll explore static postures, controlled breathing techniques, and gentle stretching to achieve physical and mental harmony. Perfect for beginners, Hatha Yoga provides a solid foundation for your yoga journey. With an emphasis on proper alignment and relaxation, you'll develop strength, flexibility, and balance while reducing stress and enhancing your overall well-being. Whether you're looking to improve your posture, increase your energy levels, or simply unwind, Hatha Yoga offers a holistic and accessible approach to yoga."
+  },
+  {
+    "id": 3,
+    "photo": "https://www.health.com/thmb/LfwFTEQMbQZz0BL0cTgQ_F6JIYY=/8192x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1395504255-33d159af773f45039286966a35dfd76d.jpg",
+    "service_name": "Yoga and Meditation Retreat",
+    "details": "Escape to our Yoga and Meditation Retreat for a transformative and rejuvenating experience. Surrounded by serene natural beauty, this retreat offers an opportunity to reconnect with your inner self. Our expert instructors will guide you through daily yoga and meditation sessions, helping you find inner peace and balance. Dive deep into mindfulness practices, explore the healing powers of nature, and nourish your body with wholesome meals. Whether you're a seasoned yogi or a beginner, this retreat is a chance to unwind, de-stress, and embark on a journey of self-discovery."
+  },
+  {
+    "id": 4,
+    "photo": "https://media1.popsugar-assets.com/files/thumbor/ZGHiDwcZ1OPdY8jv6f-cLJcHmkM=/0x0:5000x3333/fit-in/792x528/top/filters:format_auto():upscale()/2023/01/11/872/n/1922729/7d7dcc8963bf148fa66541.00739793_.jpg",
+    "service_name": "Prenatal Yoga Classes",
+    "details": "Our Prenatal Yoga Classes are designed to support expectant mothers on their journey to motherhood. These gentle and nurturing sessions focus on safe and effective yoga poses, breathing techniques, and relaxation practices tailored to pregnancy. Strengthen your body, ease discomfort, and prepare for childbirth in a supportive and compassionate environment. Connect with other mothers-to-be and nurture your well-being during this special time. Whether you're in your first trimester or approaching your due date, our Prenatal Yoga Classes provide a nurturing space to promote health and tranquility for both you and your baby."
+  },
+  {
+    "id": 5,
+    "photo": "https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_aac814c4-9558-4856-8cdd-ea77a389f2fa_1950x.jpg?v=1692833936",
+    "service_name": "Corporate Yoga Sessions",
+    "details": "Elevate employee well-being and productivity with our Corporate Yoga Sessions. Our experienced instructors will bring wellness directly to your workplace, offering on-site yoga sessions tailored to the needs of your team. Reduce stress, improve mental clarity, and enhance physical health as your employees engage in rejuvenating yoga practices. These sessions are suitable for all levels, from beginners to seasoned yogis. Boost team morale, reduce absenteeism, and foster a healthier work environment. Empower your employees with the tools to manage stress and maintain balance in their professional lives, all while fostering a sense of unity and camaraderie within your organization."
+  },
+  {
+    "id": 6,
+    "photo": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2023-08/chair-yoga-exercises-jp-230825-3589e6.gif",
+    "service_name": "Yoga for Seniors",
+    "details": "Our Yoga for Seniors program is dedicated to promoting the health and vitality of older adults. These specially designed classes prioritize mobility, balance, and relaxation to help seniors stay active and maintain a healthy lifestyle. Gentle stretching and low-impact poses are combined with breathwork to enhance physical well-being and reduce the risk of injury. Whether you're a senior looking to improve flexibility, manage arthritis, or simply enjoy a peaceful practice, our classes are designed to meet your unique needs. Join us to experience the benefits of yoga in your golden years, fostering a sense of vitality and tranquility that enhances your quality of life."
+  }
+]
