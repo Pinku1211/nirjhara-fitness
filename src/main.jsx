@@ -14,6 +14,7 @@ import Booking from './Pages/Booking/Booking.jsx';
 import Classes from './Pages/Classes/Classes.jsx';
 import ShowMore from './Pages/ShowMore/ShowMore.jsx';
 import AuthProvider from './components/Provider/AuthProvider.jsx';
+import Private from './components/Private/Private.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/booking",
-        element: <Booking></Booking>
+        element: <Private><Booking></Booking></Private>
       },
       {
         path: "/classes",
-        element: <Classes></Classes>,
+        element: <Private><Classes></Classes></Private>,
         loader: () => fetch("/classes.json")
       },
       {

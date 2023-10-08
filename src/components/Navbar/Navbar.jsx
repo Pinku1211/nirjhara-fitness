@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../../public/yoga.png"
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/booking">Reservation</NavLink></li>
@@ -28,16 +37,22 @@ const Navbar = () => {
                     <h1 className='text-xl font-bold'>Nirjhara</h1>
                 </div>
             </div>
-            
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-md font-bold">
                     {navLinks}
                 </ul>
             </div>
 
-            <div className="navbar-end hidden md:flex">
-                <Link to='/login'><button className='btn bg-transparent outline'>Log in</button></Link>
-            </div>
+            {
+                user ? <div className="navbar-end">
+                    <button onClick={handleSignOut} className='outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log out</button>
+                </div>
+                    :
+                    <div className="navbar-end">
+                        <Link to='/login'><button className='outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log in</button></Link>
+                    </div>
+            }
 
         </div>
     );

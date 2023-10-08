@@ -1,23 +1,22 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Provider/AuthProvider';
+import { SiCardano } from "react-icons/si";
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
+
     const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email')
         const password = form.get('password')
-        console.log(password, email)
         signIn(email, password)
         .then(result => {
             console.log(result.user)
-
             navigate(location?.state ? location.state : "/")
-
         })
         .catch(error=> {
             console.error(error)
@@ -26,12 +25,14 @@ const Login = () => {
 
     return (
         <section className="bg-gray-50">
-            <div className="px-4 py-20 mx-auto max-w-7xl">
+            <div className='flex justify-center py-10'>
+                <SiCardano className='text-6xl text-[#FF6969]'></SiCardano>
+            </div>
+            <div className="px-4 pb-20 mx-auto max-w-7xl">
                 <h1 className="mb-5 text-4xl font-bold text-left text-gray-800 sm:text-center">Login to Start Now!</h1>
                 <div
                     className="w-full px-0 pt-5 pb-6 mx-auto mt-4 mb-0 space-y-4 bg-transparent border-0 border-gray-200 rounded-lg md:bg-white md:border sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 md:px-6 sm:mt-8 sm:mb-5"
                 >
-
                     <form onSubmit={handleLogin} className="pb-1 space-y-4">
                         <label className="block">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your Email</span>
