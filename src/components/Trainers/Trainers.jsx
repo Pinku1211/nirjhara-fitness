@@ -7,7 +7,7 @@ const Trainers = () => {
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 <div className="outline outline-[#f7f2eb] rounded-2xl">
                     <div>
-                        <img className='rounded-t-2xl' src="https://images.inc.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg" alt="Album" />
+                        <img className='rounded-t-2xl lg:h-[260px]' src="https://images.inc.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg" alt="Album" />
                     </div>
                     <div className="card-body">
                         <h2 className="card-title">Raj Sharma</h2>
@@ -19,7 +19,7 @@ const Trainers = () => {
                 </div>
                 <div className="outline outline-[#f7f2eb] rounded-2xl">
                     <div>
-                        <img className='rounded-t-2xl h-[266px] w-full' src="https://media.licdn.com/dms/image/C5612AQEKbLUQP9dj8g/article-cover_image-shrink_720_1280/0/1556200267664?e=2147483647&v=beta&t=frAvsnsr7V6DEo029SRR-yj6tviWe0Oz1A99OI-C4vA" alt="Album" />
+                        <img className='rounded-t-2xl lg:h-[260px] w-full' src="https://media.licdn.com/dms/image/C5612AQEKbLUQP9dj8g/article-cover_image-shrink_720_1280/0/1556200267664?e=2147483647&v=beta&t=frAvsnsr7V6DEo029SRR-yj6tviWe0Oz1A99OI-C4vA" alt="Album" />
                     </div>
                     <div className="card-body">
                         <h2 className="card-title"> Emily Brown</h2>
@@ -31,7 +31,7 @@ const Trainers = () => {
                 </div>
                 <div className="outline outline-[#f7f2eb] rounded-2xl">
                     <div>
-                        <img className='rounded-t-2xl' src="https://omyogainternational.com/wp-content/uploads/2023/02/Benifits-of-500-Yoga-Teacher-Training-Programe.jpg" alt="Album" />
+                        <img className='rounded-t-2xl lg:h-[260px]' src="https://omyogainternational.com/wp-content/uploads/2023/02/Benifits-of-500-Yoga-Teacher-Training-Programe.jpg" alt="Album" />
                     </div>
                     <div className="card-body">
                         <h2 className="card-title">Sarah Smith</h2>
