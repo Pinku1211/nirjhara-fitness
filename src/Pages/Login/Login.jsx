@@ -1,25 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Provider/AuthProvider';
 import { SiCardano } from "react-icons/si";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext)
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+    const [logInError, setLogInError] = useState('');
 
     const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email')
         const password = form.get('password')
+
+        setLogInError('');
         signIn(email, password)
         .then(result => {
             console.log(result.user)
             navigate(location?.state ? location.state : "/")
         })
         .catch(error=> {
-            console.error(error)
+            console.error(error);
+            setLogInError(error.message);
+
         })
     }
 
@@ -38,13 +45,17 @@ const Login = () => {
                             <span className="block mb-1 text-md font-medium text-gray-700">Your Email</span>
                             <input className="form-input w-full p-2" type="email" name='email' placeholder="Ex. james@bond.com" inputmode="email" required />
                         </label>
-                        <label className="block">
+                        <label className="block relative">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your password</span>
-                            <input className="form-input w-full p-2" type="password" name='password' placeholder="••••••••" required />
+                            <input className="form-input w-full p-2" type={showPassword ? "text" : "password"} name='password' placeholder="Password" required />
+                            <span onClick={()=> setShowPassword(!showPassword)} className='absolute right-4 bottom-3'>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
                         </label>
                         <div className="flex flex-col justify-center">
                             <input type="submit" className="w-full mt-5 outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969] sm:w-auto sm:mt-0" value="Login" />
                         </div>
+                        {
+                            logInError && <p className='text-red-500'>{logInError.slice(22, 47)}</p>
+                        }
                     </form>
                 </div>
             

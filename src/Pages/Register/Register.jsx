@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../components/Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import { SiCardano } from "react-icons/si";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const Register = () => {
 
-    const { createUser, logInWithGoogle } = useContext(AuthContext)
+    const { createUser, logInWithGoogle } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState(''); 
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e => {
         e.preventDefault();
@@ -13,16 +17,37 @@ const Register = () => {
         const name = form.get('name')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email, password, name)
+        const checkBox = e.target.checkBox.checked
+
+        setRegisterError('')
+        setSuccess('')
+
+        if(password.length < 6) {
+            setRegisterError('Password should be at least six character')
+            return;
+        }
+        if(!/[A-Z]/.test(password)){
+            setRegisterError('Password should have an uppercase letter')
+            return;
+        }
+        if(!checkBox) {
+            setRegisterError('Please accept our terms and conditions to proceed')
+            return;
+        }
+
 
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                setSuccess("Account created successfully!")
             })
             .catch(error => {
                 console.log(error)
+                setRegisterError(error.message)
             })
     }
+
+    
 
     const handleGoogleSignIng = () => {
         logInWithGoogle()
@@ -30,9 +55,13 @@ const Register = () => {
                 console.log(result.user)
             })
             .catch(error => {
+
                 console.log(error)
             })
     }
+
+
+
 
     return (
         <section className="bg-gray-50">
@@ -46,27 +75,37 @@ const Register = () => {
                     className="w-full px-0 p-6 mx-auto mt-4 mb-0 space-y-4 bg-transparent border-0 border-gray-200 rounded-lg md:bg-white md:border sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 md:px-6 sm:mt-8 sm:mb-5"
                 >
                     <form onSubmit={handleRegister} className="pb-1 space-y-4">
+                        
                         <label className="block">
                             <span className="block mb-1 text-md font-medium text-gray-700">Name</span>
                             <input className="form-input w-full p-2" type="text" name='name' placeholder="Your full name" required />
                         </label>
                         <label className="block">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your Email</span>
-                            <input className="form-input w-full p-2" type="email" name='email' placeholder="Ex. james@bond.com" inputmode="email" required />
+                            <input className="form-input w-full p-2" type="email" name='email' placeholder="Email" inputmode="email" required />
                         </label>
-                        <label className="block">
+                        <label className="block relative">
                             <span className="block mb-1 text-md font-medium text-gray-700">Create a password</span>
-                            <input className="form-input w-full p-2" type="password" name='password' placeholder="••••••••" required />
+                            <input className="form-input w-full p-2" type={showPassword ? "text" : "password"} name='password' placeholder="Password" required />
+                            <span onClick={()=> setShowPassword(!showPassword)} className='absolute right-4 bottom-3'>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
                         </label>
+                        
                         <div className="flex flex-col items-start justify-between sm:items-center sm:flex-row">
                             <label className="flex items-center">
-                                <input type="checkbox" name='checkbox' className="form-checkbox" />
+                                <input type="checkbox" name='checkBox' className="form-checkbox" />
                                 <span className="block ml-2 text-md font-medium text-gray-700 cursor-pointer">Agree to Privacy Policy</span>
                             </label>
                             <input type="submit" className="w-full mt-5 outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969] sm:w-auto sm:mt-0" value="Register" />
                         </div>
+                        {
+                            registerError ? <p className='text-red-500'>{registerError}</p> :
+                            <p className='text-green-500'>{success}</p>
+                        }
                     </form>
+
                 </div>
+
+
                 <div className='max-w-fit mx-auto'>
                     <a onClick={handleGoogleSignIng} href="#" className="w-full py-3 btn btn-icon btn-google">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="mr-1">
