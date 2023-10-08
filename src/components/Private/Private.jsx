@@ -6,7 +6,9 @@ const Private = ({ children }) => {
     const location = useLocation()
     
     if (loading) {
-        return <span className="loading loading-spinner loading-lg mt-36 text-center"></span>
+        return <div className='w-fit mx-auto'>
+            <span className="loading loading-spinner loading-lg mt-36 text-center"></span>
+        </div>
     }
 
     if (user) {

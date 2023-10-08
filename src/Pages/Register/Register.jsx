@@ -3,10 +3,11 @@ import { AuthContext } from '../../components/Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import { SiCardano } from "react-icons/si";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import swal from 'sweetalert';
 
 const Register = () => {
 
-    const { createUser, logInWithGoogle } = useContext(AuthContext);
+    const { createUser, logInWithGoogle, updateUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState(''); 
     const [showPassword, setShowPassword] = useState(false);
@@ -26,8 +27,8 @@ const Register = () => {
             setRegisterError('Password should be at least six character')
             return;
         }
-        if(!/[A-Z]/.test(password)){
-            setRegisterError('Password should have an uppercase letter')
+        if(!/(?=.*[A-Z])(?=.*[@#$%^&+=])/.test(password)){
+            setRegisterError('Password is missing an uppercase letter or special character')
             return;
         }
         if(!checkBox) {
@@ -40,14 +41,22 @@ const Register = () => {
             .then(result => {
                 console.log(result.user)
                 setSuccess("Account created successfully!")
+                swal("Nirjhara", "Account created successfully!");
+                
             })
             .catch(error => {
                 console.log(error)
                 setRegisterError(error.message)
             })
+
+        updateUser(name)
+            .then()
+            .catch()
+
+        
+
     }
 
-    
 
     const handleGoogleSignIng = () => {
         logInWithGoogle()
@@ -55,12 +64,9 @@ const Register = () => {
                 console.log(result.user)
             })
             .catch(error => {
-
                 console.log(error)
             })
     }
-
-
 
 
     return (
@@ -98,13 +104,13 @@ const Register = () => {
                             <input type="submit" className="w-full mt-5 outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969] sm:w-auto sm:mt-0" value="Register" />
                         </div>
                         {
-                            registerError ? <p className='text-red-500'>{registerError}</p> :
-                            <p className='text-green-500'>{success}</p>
+                            registerError && <p className='text-red-500'>{registerError}</p> 
+                            
+                            
                         }
                     </form>
 
                 </div>
-
 
                 <div className='max-w-fit mx-auto'>
                     <a onClick={handleGoogleSignIng} href="#" className="w-full py-3 btn btn-icon btn-google">

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const Service = ({ card }) => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
 
     const { id, photo, service_name, details } = card
 
     return (
-        <div className='p-4'>
+        <div className='p-4' data-aos="slide-left">
             <div className='flex justify-center mb-10'>
                 <img className='rounded-full h-[270px] w-[270px]' src={photo} alt="" />
             </div>

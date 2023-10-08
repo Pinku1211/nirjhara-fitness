@@ -32,6 +32,7 @@ const Login = () => {
 
     return (
         <section className="bg-gray-50">
+            
             <div className='flex justify-center py-10'>
                 <SiCardano className='text-6xl text-[#FF6969]'></SiCardano>
             </div>
@@ -43,7 +44,7 @@ const Login = () => {
                     <form onSubmit={handleLogin} className="pb-1 space-y-4">
                         <label className="block">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your Email</span>
-                            <input className="form-input w-full p-2" type="email" name='email' placeholder="Ex. james@bond.com" inputmode="email" required />
+                            <input className="form-input w-full p-2" type="email" name='email' placeholder="Your email" inputmode="email" required />
                         </label>
                         <label className="block relative">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your password</span>
