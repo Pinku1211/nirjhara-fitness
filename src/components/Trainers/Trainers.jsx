@@ -8,11 +8,12 @@ const Trainers = () => {
     }, [])
     return (
         <div className='py-20 px-8 lg:px-24'>
-            <h1 className="text-4xl font-bold text-center mb-8">Our Trainers</h1>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
+            <h1 className="text-4xl font-bold text-center mb-8">Trainers of Trainers</h1>
+            <h1 className='text-2xl font-semibold text-center mb-8'>We also provide the training session for the trainers</h1>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                 <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
                     <div>
-                        <img className='rounded-t-2xl lg:h-[260px]' src="https://images.inc.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg" alt="Album" />
+                        <img className='rounded-t-2xl lg:h-[260px] w-full' src="https://images.inc.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg" alt="Album" />
                     </div>
                     <div className="card-body">
                         <h2 className="card-title">Raj Sharma</h2>
@@ -36,14 +37,26 @@ const Trainers = () => {
                 </div>
                 <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
                     <div>
-                        <img className='rounded-t-2xl lg:h-[260px]' src="https://omyogainternational.com/wp-content/uploads/2023/02/Benifits-of-500-Yoga-Teacher-Training-Programe.jpg" alt="Album" />
+                        <img className='rounded-t-2xl lg:h-[260px] w-full' src="https://omyogainternational.com/wp-content/uploads/2023/02/Benifits-of-500-Yoga-Teacher-Training-Programe.jpg" alt="Album" />
                     </div>
                     <div className="card-body">
                         <h2 className="card-title">Sarah Smith</h2>
-                        <p>Certified Yoga Instructor</p>
+                        <p>Yoga Challenge Instructor</p>
                         <h1 className='text-xl font-semibold'>Schedule</h1>
                         <p>Monday: 7:00 AM - 8:15 AM - Vinyasa Flow <br />
                         Friday: 9:00 AM - 10:15 AM - Gentle Yoga</p>
+                    </div>
+                </div>
+                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
+                    <div>
+                        <img className='rounded-t-2xl lg:h-[260px] w-full' src="https://hips.hearstapps.com/hmg-prod/images/281/articles/2017/09/sized-janice-yoga-teacher-1-1506731466.jpg?resize=640:*" alt="Album" />
+                    </div>
+                    <div className="card-body">
+                        <h2 className="card-title">John Eden</h2>
+                        <p>Certified Yoga Instructor</p>
+                        <h1 className='text-xl font-semibold'>Schedule</h1>
+                        <p>Tuesday: 7:00 AM - 8:15 AM  <br />
+                        Friday: 9:00 AM - 10:15 AM </p>
                     </div>
                 </div>
 
