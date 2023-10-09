@@ -44,7 +44,7 @@ sum(1, "2");
 
 #### Answer: C
 
-<i>JavaScript is a dynamically typed language. Here, JavaScript will convert the number 1 to a string and concatenate it with the string "2" and output will be a string of '12'.</i>
+<i>In this code, we have a function called sum that takes two parameters, a and b, and returns the sum of these two parameters.Then calling the sum function with the arguments. Where JavaScript is a dynamically typed language, which means it will attempt to perform type coercion and convert the operands to a common data type when you use the + operator. Here, JavaScript will convert the number 1 to a string and concatenate it with the string "2" and output will be a string of '12'.</i>
 
 </p>
 </details>
@@ -70,7 +70,7 @@ console.log(food);
 
 #### Answer: A
 
-<i>The food array has not been changed by changing the info.favoriteFood property. The object info simply holds a reference and when the value of info.favoriteFood is changed, it doesn't modify the original array.</i>
+<i>In this code, we have an array food containing four food emoji strings, and an object info with a property favoriteFood set to the first element of the food array, which is "🍕". Then, the value of favoriteFood is changed to "🍝". The food array has not been changed by changing the info.favoriteFood property. The object info simply holds a reference and when the value of info.favoriteFood is changed, it doesn't modify the original array.</i>
 
 </p>
 </details>
@@ -95,7 +95,7 @@ console.log(sayHi());
 
 #### Answer: B
 
-<i>In this code if the function gets no argument it will simply return what it has to and a string of 'undefined' for the dynamic 'name' argument.</i>
+<i> The sayHi function does not have a default value for name, and if you call it without providing an argument, it will result in name being undefined. In such a case, it will give a string with undefined in the output. So, in this code if the function gets no argument it will simply return what it has to and a string of 'undefined' for the dynamic 'name' argument.</i>
 
 </p>
 </details>
