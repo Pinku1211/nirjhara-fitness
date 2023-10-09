@@ -18,10 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
-
+<i>JavaScript will not provide a syntax error because it's a valid assignment of the variable 'greetign'. JavaScript will treat 'greatign' as a new variable. So we will get an empty object without any error. However, the variable 'greeting' remains unused.</i>
 </p>
 </details>
 
@@ -43,9 +42,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>JavaScript is a dynamically typed language. Here, JavaScript will convert the number 1 to a string and concatenate it with the string "2" and output will be a string of '12'.</i>
 
 </p>
 </details>
@@ -69,9 +68,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>The food array has not been changed by changing the info.favoriteFood property. The object info simply holds a reference and when the value of info.favoriteFood is changed, it doesn't modify the original array.</i>
 
 </p>
 </details>
@@ -94,9 +93,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>In this code if the function gets no argument it will simply return what it has to and a string of 'undefined' for the dynamic 'name' argument.</i>
 
 </p>
 </details>
@@ -122,9 +121,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>The forEach loop will iterate through all the elements of the nums array and increment the count variable for each element that is truthy. In this case, the elements 1, 2, and 3 are truthy, and 0 is not. So, in total the loop will iterate for trhee times and increase the value of count each which makes it 3.</i>
 
 </p>
 </details>
