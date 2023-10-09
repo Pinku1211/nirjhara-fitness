@@ -1,8 +1,13 @@
 import React from 'react';
+import logo from "../../../public/yoga.png";
 
 const Footer = () => {
     return (
         <footer className="footer footer-center px-5 py-10 bg-[#191717] text-gray-400">
+            <div className='flex items-center gap-2 '>
+                <img className='w-12' src={logo} alt="" />
+                <h1 className='text-xl font-bold'>Nirjhara</h1>
+            </div>
             <nav className="grid grid-flow-col gap-2 md:gap-4">
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>

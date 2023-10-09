@@ -15,12 +15,14 @@ import Classes from './Pages/Classes/Classes.jsx';
 import ShowMore from './Pages/ShowMore/ShowMore.jsx';
 import AuthProvider from './components/Provider/AuthProvider.jsx';
 import Private from './components/Private/Private.jsx';
+import Error from './Pages/Error/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -45,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <ShowMore></ShowMore>,
+        element: <Private><ShowMore></ShowMore></Private>,
         loader: () => fetch ("/services.json")
       },
 

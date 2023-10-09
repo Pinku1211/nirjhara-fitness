@@ -21,8 +21,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 my-10 lg:px-24">
-            <div className="navbar-start w-full md:justify-start">
+        <div className="navbar bg-base-100 my-10 flex justify-between lg:px-24">
+            <div className="navbar-start w-fit md:justify-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className='flex items-center gap-2 '>
+                <div className='flex w-fit items-center gap-2 '>
                     <img className='w-12' src={logo} alt="" />
                     <h1 className='text-xl font-bold'>Nirjhara</h1>
                 </div>
@@ -45,13 +45,15 @@ const Navbar = () => {
             </div>
 
             {
-                user ? <div className="navbar-end">
-                    <p className='text-xs mr-4'>{user.email}</p>
-                    <button onClick={handleSignOut} className='outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log out</button>
+                user ? <div className="navbar-end w-fit">
+                    <img className='rounded-full w-[30px] mr-3' src={user.photoURL} alt="" />
+                    <p className='text-xs mr-4'>{user.displayName}</p>
+                    
+                    <button onClick={handleSignOut} className='outline-white px-2 py-1 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log out</button>
                 </div>
                     :
                     <div className="navbar-end">
-                        <Link to='/login'><button className='outline-white px-4 py-2 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log in</button></Link>
+                        <Link to='/login'><button className='outline-white px-2 py-1 rounded-lg hover:bg-[#ff6969] hover:text-white border border-[#ff6969] text-[#ff6969]'>Log in</button></Link>
                     </div>
             }
 

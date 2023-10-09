@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom';
 import { SiCardano } from "react-icons/si";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import swal from 'sweetalert';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
-    const { createUser, logInWithGoogle, updateUser } = useContext(AuthContext);
+    const { createUser, logInWithGoogle, loading } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
-    const [success, setSuccess] = useState(''); 
     const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get('name')
+        const photo = form.get('photo')
         const email = form.get('email')
         const password = form.get('password')
         const checkBox = e.target.checkBox.checked
@@ -40,7 +41,11 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
-                setSuccess("Account created successfully!")
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo
+                })
+                
                 swal("Nirjhara", "Account created successfully!");
                 
             })
@@ -49,9 +54,6 @@ const Register = () => {
                 setRegisterError(error.message)
             })
 
-        updateUser(name)
-            .then()
-            .catch()
 
         
 
@@ -83,8 +85,12 @@ const Register = () => {
                     <form onSubmit={handleRegister} className="pb-1 space-y-4">
                         
                         <label className="block">
-                            <span className="block mb-1 text-md font-medium text-gray-700">Name</span>
-                            <input className="form-input w-full p-2" type="text" name='name' placeholder="Your full name" required />
+                            <span className="block mb-1 text-md font-medium text-gray-700">Your Name</span>
+                            <input className="form-input w-full p-2" type="text" name='name' placeholder="Your name" required />
+                        </label>
+                        <label className="block">
+                            <span className="block mb-1 text-md font-medium text-gray-700">Your Photo</span>
+                            <input className="form-input w-full p-2" type="text" name='photo' placeholder="PhotoUrl" required />
                         </label>
                         <label className="block">
                             <span className="block mb-1 text-md font-medium text-gray-700">Your Email</span>
