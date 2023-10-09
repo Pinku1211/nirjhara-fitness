@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../components/Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { SiCardano } from "react-icons/si";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import swal from 'sweetalert';
@@ -11,6 +11,7 @@ const Register = () => {
     const { createUser, logInWithGoogle, loading } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -19,16 +20,17 @@ const Register = () => {
         const photo = form.get('photo')
         const email = form.get('email')
         const password = form.get('password')
-        const checkBox = e.target.checkBox.checked
+        const checkBox = e.target.checkBox.checked;
+
+        
 
         setRegisterError('')
-        setSuccess('')
 
         if(password.length < 6) {
             setRegisterError('Password should be at least six character')
             return;
         }
-        if(!/(?=.*[A-Z])(?=.*[@#$%^&+=])/.test(password)){
+        if(!/(?=.*[A-Z])(?=.*[!@#$%^&+=])/.test(password)){
             setRegisterError('Password is missing an uppercase letter or special character')
             return;
         }
@@ -40,6 +42,7 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
+
                 console.log(result.user)
                 updateProfile(result.user, {
                     displayName: name,
@@ -47,6 +50,7 @@ const Register = () => {
                 })
                 
                 swal("Nirjhara", "Account created successfully!");
+                navigate(location?.state ? location.state : "/")
                 
             })
             .catch(error => {
@@ -64,6 +68,7 @@ const Register = () => {
         logInWithGoogle()
             .then(result => {
                 console.log(result.user)
+
             })
             .catch(error => {
                 console.log(error)

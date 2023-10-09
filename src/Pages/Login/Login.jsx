@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Provider/AuthProvider';
 import { SiCardano } from "react-icons/si";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import swal from 'sweetalert';
 
 const Login = () => {
 
@@ -21,6 +22,7 @@ const Login = () => {
         signIn(email, password)
         .then(result => {
             console.log(result.user)
+            swal("Nirjhara", "Logged in successfully!");
             navigate(location?.state ? location.state : "/")
         })
         .catch(error=> {

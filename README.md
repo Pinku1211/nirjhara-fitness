@@ -1,8 +1,9 @@
-# React + Vite
+# Nirjhara
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features and Functionalities
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    * A website of Yoga event management named Nirjhara that manages variety of events including offline and online.
+    * A website with firebase authentication
+    * Log in with google account
+    * Application of simple AOS animation
+    * A fully responsive for any kind of devices out there!

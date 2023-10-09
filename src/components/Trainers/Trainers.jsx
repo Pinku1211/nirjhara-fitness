@@ -10,7 +10,7 @@ const Trainers = () => {
         <div className='py-20 px-8 lg:px-24'>
             <h1 className="text-4xl font-bold text-center mb-8">Our Trainers</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
-                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="slide-left">
+                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
                     <div>
                         <img className='rounded-t-2xl lg:h-[260px]' src="https://images.inc.com/uploaded_files/image/1920x1080/getty_481292845_77896.jpg" alt="Album" />
                     </div>
@@ -22,7 +22,7 @@ const Trainers = () => {
                             Saturday: 9:30 AM - 10:45 AM - Mindful Yoga and Meditation</p>
                     </div>
                 </div>
-                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="slide-right">
+                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
                     <div>
                         <img className='rounded-t-2xl lg:h-[260px] w-full' src="https://media.licdn.com/dms/image/C5612AQEKbLUQP9dj8g/article-cover_image-shrink_720_1280/0/1556200267664?e=2147483647&v=beta&t=frAvsnsr7V6DEo029SRR-yj6tviWe0Oz1A99OI-C4vA" alt="Album" />
                     </div>
@@ -34,7 +34,7 @@ const Trainers = () => {
                         Wednesday: 3:30 PM - 4:45 PM - Postnatal Yoga</p>
                     </div>
                 </div>
-                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="slide-left">
+                <div className="outline outline-[#f7f2eb] rounded-2xl" data-aos="flip-left">
                     <div>
                         <img className='rounded-t-2xl lg:h-[260px]' src="https://omyogainternational.com/wp-content/uploads/2023/02/Benifits-of-500-Yoga-Teacher-Training-Programe.jpg" alt="Album" />
                     </div>
